@@ -12,7 +12,8 @@ const Hero = () => {
                 <p className=" text-black ">Bitcoin</p>
             </h1>
             <div className="flex justify-between w-full">
-                <div className="w-full ml-10 rounded-2xl overflow-hidden shadow-lg">
+                <div className="h-full w-full ml-10 rounded-2xl overflow-hidden shadow-lg">
+                    <div></div>
                     <Widget />
                 </div>
                 <div className="mr-10 ml-5 h-full min-w-[400px]">
@@ -31,7 +32,7 @@ const Hero = () => {
                             <ArrowRight className="ml-2" size={20} />
                         </Button>
                     </div>
-                    <div className="m-5 w-full bg">
+                    <div className="my-5 w-full">
                         <TrendingCoins />
                     </div>
                 </div>
