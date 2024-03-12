@@ -5,6 +5,9 @@ import TrendingCoins from "./TrendingCoins.jsx";
 import Breadcrumb from "./Breadcrumb.jsx";
 import Overview from "./Overview.jsx";
 import Sentiments from "./Sentiments.jsx";
+import About from "./About.jsx";
+import Tokenomics from "./Tokenomics.jsx";
+import Teams from "./Teams.jsx";
 
 const Hero = () => {
 
@@ -32,8 +35,20 @@ const Hero = () => {
                         <Overview />
                     </div>
 
-                    <div>
+                    <div className="my-5">
                         <Sentiments />
+                    </div>
+
+                    <div className="my-5">
+                        <About />
+                    </div>
+
+                    <div className="my-5">
+                        <Tokenomics />
+                    </div>
+
+                    <div className="my-5">
+                        <Teams />
                     </div>
 
                 </div>

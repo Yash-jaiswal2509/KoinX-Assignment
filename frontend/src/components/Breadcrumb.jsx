@@ -4,9 +4,6 @@ import { useState } from "react";
 const Breadcrumb = () => {
     const [selectLabel, setSelectLabel] = useState(0);
 
-
-    console.log(selectLabel);
-
     return (
         <div className="flex ml-1 gap-4 pr-20 border-b-2 font-medium 2xl:text-lg xl:text-base lg:text-sm" >
             {pageBreadcrumbs.map((name, id) => (

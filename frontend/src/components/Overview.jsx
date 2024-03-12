@@ -49,8 +49,6 @@ const Overview = () => {
             setMcRank(data1.market_cap_rank);
             setMarketCap(data1.market_cap.usd);
             setMcd(data2.market_cap_percentage.btc)
-            console.log(response1.data);
-            console.log(response2.data);
 
         }
         fetchData();
@@ -64,11 +62,11 @@ const Overview = () => {
 
             <div className=" flex justify-between items-center">
                 <div className="m-4">
-                    <p className="mb-2 text-lg">Today's Low</p>
+                    <p className="mb-2 text-base">Today's Low</p>
                     <span className="font-semibold text-lg">${todayLow}</span>
                 </div>
                 <div className="relative px-8">
-                    <div className="mb-1 bg-gradient-to-r from-red-400 from-10% via-yellow-400 via-60% to-green-400 w-[550px] h-[6px] rounded-full"></div>
+                    <div className="mb-1 bg-gradient-to-r from-red-400 from-10% via-yellow-400 via-60% to-green-400 w-[580px] h-[6px] rounded-full"></div>
                     <span style={{ right: `${rangePosition}px` }} className="absolute text-lg flex flex-col items-center">
                         <TriangleIcon size={12} fill="black" strokeWidth={0} />
                         <span className="mt-1">${currentPrice}</span>
@@ -77,7 +75,7 @@ const Overview = () => {
 
 
                 <div className="m-4">
-                    <p className="mb-2 text-lg">Today's High</p>
+                    <p className="mb-2 text-base">Today's High</p>
                     <span className="font-semibold text-lg">${todayHigh}</span>
                 </div>
             </div>
@@ -85,7 +83,7 @@ const Overview = () => {
 
             <div className=" flex justify-between items-center">
                 <div className="m-4">
-                    <p className="mb-2 text-lg">All time Low</p>
+                    <p className="mb-2 text-base">All time Low</p>
                     <span className="font-semibold text-lg">${atl}</span>
                 </div>
                 <div className="px-6">
@@ -93,12 +91,12 @@ const Overview = () => {
                 </div>
 
                 <div className="m-4">
-                    <p className="mb-2 text-lg">All time High</p>
+                    <p className="mb-2 text-base">All time High</p>
                     <span className="font-semibold text-lg">${ath}</span>
                 </div>
             </div>
 
-            <h2 className="text-2xl font-bold text-black/70 flex items-center mt-8 gap-2">Fundamentals <LucideInfo size={30} color="white" fill="gray" className=" opacity-50" /></h2>
+            <h2 className="text-2xl font-bold text-black/70 flex items-center mt-8 gap-2">Fundamentals <LucideInfo size={30} color="white" fill="grey" className=" opacity-50" /></h2>
             <div className="grid grid-cols-2 gap-20 w-full my-2">
                 <div>
                     <div className="flex justify-between text-lg py-5 border-b-2"><div className="font-semibold text-gray-500">
