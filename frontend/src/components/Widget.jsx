@@ -62,7 +62,7 @@ function TradingViewWidget() {
   );
 
   return (
-    <div className="tradingview-widget-container overflow-hidden" ref={container}></div>
+    <div style={{width:"80%"}} className="tradingview-widget-container overflow-hidden" ref={container}></div>
   );
 }
 

@@ -33,7 +33,7 @@ const YouMayAlsoLike = () => {
     }, []);
 
     return (
-        <div className="p-16 pb-24">
+        <div className="p-16 pb-24 mb-5 md:mb-0">
             <h2 className="text-3xl font-bold mb-5">You May Also Like</h2>
             <Carousel>
                 <CarouselContent>
@@ -42,7 +42,7 @@ const YouMayAlsoLike = () => {
                         const spanStyle = "h-8 w-16 my-2 text-base flex items-center justify-center gap-1 rounded-md font-semibold";
 
                         return (
-                            <CarouselItem key={coin.item.id} className="border-2 p-5 basis-1/4 ml-4 rounded-2xl">
+                            <CarouselItem key={coin.item.id} className="border-2 p-5 basis-4/5 sm:basis-3/5 md:basis-2/5 lg:basis-1/4 ml-4 rounded-2xl">
                                 <div className="flex flex-col mr-10 gap-2">
                                     <div className="flex items-center gap-2 text-nowrap">
                                         <img src={coin.item.thumb} alt={coin.item.id} className="h-8 w-8 rounded-full" />
@@ -70,12 +70,12 @@ const YouMayAlsoLike = () => {
                         const spanStyle = "h-8 w-16 my-2 text-base flex items-center justify-center gap-1 rounded-md font-semibold";
 
                         return (
-                            <CarouselItem key={coin.item.id} className="border-2 p-5 basis-1/4 ml-4 rounded-2xl">
+                            <CarouselItem key={coin.item.id} className="border-2 p-5 basis-4/5 sm:basis-3/5 md:basis-2/5 ml-4 rounded-2xl lg:basis-1/4">
                                 <div className="flex flex-col mr-10 gap-2">
                                     <div className="flex items-center gap-2 text-nowrap">
                                         <img src={coin.item.thumb} alt={coin.item.id} className="h-8 w-8 rounded-full" />
                                         <p className="font-semibold text-lg">{coin.item.name}</p>
-                                        <span className={(priceChange > 0) ? `bg-[#47b68f]/10 text-[#47b68f] ${spanStyle}` : `bg-[#ff6565]/10 text-[#ff6565] ${spanStyle}`}>{priceChange}</span>
+                                        <span className={(priceChange > 0) ? `bg-[#47b68f]/10 text-[#47b68f] ${spanStyle}` : `bg-[#ff6565]/10 text-[#ff6565] ${spanStyle}`}>{(priceChange > 0 ? "+" : "")}{priceChange}</span>
                                     </div>
                                     <div className=" font-bold text-2xl">
                                         {coin.item.data.price}

@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export const darkMode = ["class"];
 export const content = [
-  './pages/**/*.{js,jsx}',
-  './components/**/*.{js,jsx}',
-  './app/**/*.{js,jsx}',
-  './src/**/*.{js,jsx}',
+  "./pages/**/*.{js,jsx}",
+  "./components/**/*.{js,jsx}",
+  "./app/**/*.{js,jsx}",
+  "./src/**/*.{js,jsx}",
 ];
 export const prefix = "";
 export const theme = {
@@ -72,4 +72,7 @@ export const theme = {
     },
   },
 };
-export const plugins = [require("tailwindcss-animate")];
+export const plugins = [
+  require("tailwindcss-animate"),
+  require("tailwind-scrollbar"),
+];

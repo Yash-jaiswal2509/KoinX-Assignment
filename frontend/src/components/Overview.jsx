@@ -54,50 +54,54 @@ const Overview = () => {
         fetchData();
     }, []);
 
-    const rangePosition = Math.floor((550 * (todayHigh - currentPrice)) / (todayHigh - todayLow));
+    const max = 530;
+    const screenWidth = Math.floor((screen.width) / 3);
+    const dynamicWidth = (screenWidth < max) ? screenWidth : max;
+    const rangePosition = Math.floor(((dynamicWidth - 30) * (todayHigh - currentPrice)) / (todayHigh - todayLow));
+
 
     return (
-        <div className="w-full p-6 bg-white rounded-lg shadow-sm">
+        <div className="w-full p-2 bg-white rounded-lg shadow-sm text-nowrap lg:p-6">
             <h1 className="text-3xl font-bold">Performance</h1>
 
             <div className=" flex justify-between items-center">
                 <div className="m-4">
-                    <p className="mb-2 text-base">Today's Low</p>
-                    <span className="font-semibold text-lg">${todayLow}</span>
+                    <p className="mb-2 text-xs sm:text-sm md:text-base">Today's Low</p>
+                    <span className="font-semibold text-base sm:text-lg">${todayLow}</span>
                 </div>
-                <div className="relative px-8">
-                    <div className="mb-1 bg-gradient-to-r from-red-400 from-10% via-yellow-400 via-60% to-green-400 w-[580px] h-[6px] rounded-full"></div>
+                <div className="relative px-0 sm:px-8">
+                    <div style={{ width: `${dynamicWidth}px` }} className="mb-1 bg-gradient-to-r from-red-400 from-10% via-yellow-400 via-60% to-green-400 h-[6px] rounded-full"></div>
                     <span style={{ right: `${rangePosition}px` }} className="absolute text-lg flex flex-col items-center">
                         <TriangleIcon size={12} fill="black" strokeWidth={0} />
-                        <span className="mt-1">${currentPrice}</span>
+                        <span className="mt-1 text-sm sm:text-base">${currentPrice}</span>
                     </span>
                 </div>
 
-
                 <div className="m-4">
-                    <p className="mb-2 text-base">Today's High</p>
-                    <span className="font-semibold text-lg">${todayHigh}</span>
+                    <p className="mb-2 text-xs sm:text-sm md:text-base">Today's High</p>
+                    <span className="font-semibold text-base sm:text-lg">${todayHigh}</span>
                 </div>
             </div>
 
 
             <div className=" flex justify-between items-center">
                 <div className="m-4">
-                    <p className="mb-2 text-base">All time Low</p>
-                    <span className="font-semibold text-lg">${atl}</span>
+                    <p className="mb-2 text-xs sm:text-sm md:text-base">All time Low</p>
+                    <span className="font-semibold text-base sm:text-lg">${atl}</span>
                 </div>
-                <div className="px-6">
-                    <div className="mb-1 bg-gradient-to-r from-red-400 from-10% via-yellow-400 via-60% to-green-400 w-[580px] h-[6px] rounded-full"></div>
+                <div className="relative px-0 sm:px-8">
+                    <div style={{ width: `${dynamicWidth}px` }} className="mb-1 bg-gradient-to-r from-red-400 from-10% via-yellow-400 via-60% to-green-400 h-[6px] rounded-full"></div>
                 </div>
 
                 <div className="m-4">
-                    <p className="mb-2 text-base">All time High</p>
-                    <span className="font-semibold text-lg">${ath}</span>
+                    <p className="mb-2 text-xs sm:text-sm md:text-base">All time High</p>
+                    <span className="font-semibold text-base sm:text-lg">${ath}</span>
                 </div>
             </div>
 
+            {/* Fundamentals */}
             <h2 className="text-2xl font-bold text-black/70 flex items-center mt-8 gap-2">Fundamentals <LucideInfo size={30} color="white" fill="grey" className=" opacity-50" /></h2>
-            <div className="grid grid-cols-2 gap-20 w-full my-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-20 w-full my-2">
                 <div>
                     <div className="flex justify-between text-lg py-5 border-b-2"><div className="font-semibold text-gray-500">
                         Bitcoin Price</div>
@@ -108,7 +112,7 @@ const Overview = () => {
                         <div className="font-semibold">${todayLow} / ${todayHigh}</div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2"><div className="font-semibold text-gray-500">
-                        All-Time Low / All-Time High</div>
+                        ATL / ATH</div>
                         <div className="font-semibold">${atl} / ${ath}</div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2"><div className="font-semibold text-gray-500">

@@ -15,8 +15,8 @@ const Tokenomics = () => {
                     <DoughnutChart data={data} holeColor={"white"}/>
                 </div>
                 <div className="text-lg ">
-                    <p className="flex items-center gap-3"><div className="h-4 w-4 rounded-full bg-blue-500"></div> Crowdsale Investors: 80%</p>
-                    <p className="flex items-center gap-3"><div className="h-4 w-4 rounded-full bg-orange-400"></div> Foundation: 20%</p>
+                    <p className="flex-col mb-2 sm:mb-0 flex sm:flex-row sm:items-center sm:gap-3 sm:text-base text-sm"><div className="h-4 w-4 rounded-full bg-blue-500 "></div> Crowdsale Investors: 80%</p>
+                    <p className="flex-col flex sm:flex-row sm:items-center sm:gap-3 sm:text-base text-sm"><div className="h-4 w-4 rounded-full bg-orange-400 "></div> Foundation: 20%</p>
                 </div>
             </div>
             <div className="mt-5">
