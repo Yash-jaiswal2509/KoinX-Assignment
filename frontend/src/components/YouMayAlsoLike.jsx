@@ -33,7 +33,7 @@ const YouMayAlsoLike = () => {
     }, []);
 
     return (
-        <div className="p-16 pb-24 mb-5 md:mb-0">
+        <div className="p-10 sm:p-16 pb-24 mb-5 md:mb-0">
             <h2 className="text-3xl font-bold mb-5">You May Also Like</h2>
             <Carousel>
                 <CarouselContent>
@@ -58,8 +58,8 @@ const YouMayAlsoLike = () => {
                         )
                     })}
                 </CarouselContent>
-                <CarouselNext className="w-12 h-12 right-0" />
-                <CarouselPrevious className="w-12 h-12 left-0" />
+                <CarouselNext className="w-12 h-12 right-0 opacity-80" />
+                <CarouselPrevious className="w-12 h-12 left-0 opacity-80" />
             </Carousel>
 
             <h2 className="text-3xl font-bold my-8">Trending Coins</h2>
