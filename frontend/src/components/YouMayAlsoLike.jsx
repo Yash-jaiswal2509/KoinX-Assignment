@@ -22,7 +22,7 @@ const YouMayAlsoLike = () => {
                     "x-cg-demo-api-key": apiKey
                 },
             })
-
+            
             setSortCoins(response1.data.coins.reverse());
             setCoins(response2.data.coins);
 
