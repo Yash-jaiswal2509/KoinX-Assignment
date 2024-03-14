@@ -55,7 +55,7 @@ const Hero = () => {
                         <YouMayAlsoLike />
                     </div>
 
-                    <div className="md:hidden block mt-5">
+                    <div className="md:hidden block my-5">
                         <FreeKoinx />
                     </div>
 

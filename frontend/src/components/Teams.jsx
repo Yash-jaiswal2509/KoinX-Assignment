@@ -10,7 +10,7 @@ const Teams = () => {
             </p>
             <div className="flex flex-col gap-5 my-5 ">
                 {teamData.map((member, id) => (
-                    <div key={id} className="flex-col flex md:flex-row gap-8 bg-blue-400/10 rounded-lg py-5 px-8">
+                    <div key={id} className="flex-col flex md:flex-row gap-4 sm:gap-8 bg-blue-400/10 rounded-lg py-5 px-8">
                         <div className="flex flex-col text-nowrap items-center">
                             <img src={member.image} alt={member.name} className="rounded-lg w-28 h-32" />
                             <h2 className="text-lg mt-2 font-semibold">{member.name}</h2>

@@ -73,10 +73,10 @@ const Sentiments = () => {
             </Carousel>
 
 
-            <div className="my-8">
-                <h1 className="text-2xl my-6 text-gray-600 font-bold flex items-center gap-2">Analyst Estimates <InfoIcon className=" opacity-80" size={30} fill="grey" color="white" /></h1>
-                <div className="flex items-center gap-5 sm:gap-6 md:gap-6">
-                    <div className="w-12 h-12 p-2 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#0fba83]/15 rounded-full text-xs sm:text-xl text-[#0fba83] font-bold flex items-center justify-center"><span>{sentimentUp}%</span></div>
+            <div className="mt-4 sm:my-8">
+                <h1 className="text-xl sm:text-2xl my-6 text-gray-600 font-bold flex items-center gap-2">Analyst Estimates <InfoIcon className=" opacity-80" size={30} fill="grey" color="white" /></h1>
+                <div className="flex-col flex sm:flex-row items-center gap-5 sm:gap-6 md:gap-6">
+                    <div className="w-20 h-20 mx-auto sm:mx-0  p-2 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#0fba83]/15 rounded-full text-sm sm:text-xl text-[#0fba83] font-bold flex items-center justify-center"><span>{sentimentUp}%</span></div>
                     <div className="flex flex-col justify-between text-xs mr-1 sm:text-sm md:text-lg md:p-8">
                         <div className="flex items-center gap-8 text-nowrap">
                             <div className="mb-2">Sentiment Up </div>

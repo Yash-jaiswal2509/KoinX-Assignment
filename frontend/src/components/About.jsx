@@ -36,19 +36,19 @@ const About = () => {
             <div>
                 <h1 className="text-3xl font-bold mt-5">Already holding bitcoin?</h1>
                 <div className="py-3 flex-col flex md:flex-row gap-6 border-b-2 border-b-gray-200">
-                    <div className="p-3 flex gap-6 rounded-lg bg-gradient-to-br from-green-400 to-cyan-600">
-                        <img className="w-36 h-36 rounded-lg" src="about1.png" alt="about1" />
+                    <div className="p-3 flex gap-3 sm:gap-6 rounded-lg bg-gradient-to-br from-green-400 to-cyan-600">
+                        <img className="w-36 h-44 sm:h-36 rounded-lg" src="about1.png" alt="about1" />
                         <div>
-                            <h2 className="text-2xl font-bold pr-8 text-white">Calculate your Profits</h2>
-                            <Button size="sm" className="my-3 bg-white text-black font-bold mt-5 px-4 hover:bg-gray-100">Check Now <ArrowRight size={18} className="ml-1" /></Button>
+                            <h2 className="text-2xl font-bold pr-0 sm:pr-8 text-white">Calculate your Profits</h2>
+                            <Button size="sm" className="my-3 bg-white text-black font-bold mt-5 px-1 sm:px-4 hover:bg-gray-100">Check Now <ArrowRight size={18} className="ml-1" /></Button>
                         </div>
                     </div>
 
-                    <div className="p-3 flex gap-6 rounded-lg bg-gradient-to-br from-red-500 to-orange-400">
-                        <img className="w-36 h-36 rounded-lg" src="about2.png" alt="about2" />
+                    <div className="p-3 flex gap-3 sm:gap-6 rounded-lg bg-gradient-to-br from-red-500 to-orange-400">
+                        <img className="w-36 h-44 sm:h-36 rounded-lg" src="about2.png" alt="about2" />
                         <div>
-                            <h2 className="text-2xl font-bold pr-6 text-white">Calculate your tax Liability</h2>
-                            <Button size="sm" className="my-3 bg-white text-black font-bold mt-5 px-4 hover:bg-gray-100">Check Now <ArrowRight size={18} className="ml-1" /></Button>
+                            <h2 className="text-2xl font-bold pr-0 sm:pr-6 text-white">Calculate your Tax Liability</h2>
+                            <Button size="sm" className="my-3 bg-white text-black font-bold mt-5 px-1 sm:px-4 hover:bg-gray-100">Check Now <ArrowRight size={18} className="ml-1" /></Button>
                         </div>
                     </div>
                 </div>
