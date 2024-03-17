@@ -67,19 +67,19 @@ const Overview = () => {
             <div className=" flex justify-between items-center">
                 <div className="m-4">
                     <p className="mb-2 text-xs sm:text-sm md:text-base">Today's Low</p>
-                    <span className="font-semibold text-base sm:text-lg">${todayLow}</span>
+                    <span className="font-semibold text-base sm:text-lg">${todayLow.toLocaleString()}</span>
                 </div>
                 <div className="relative px-0 sm:px-8">
                     <div style={{ width: `${dynamicWidth}px` }} className="mb-1 bg-gradient-to-r from-red-400 from-10% via-yellow-400 via-60% to-green-400 h-[6px] rounded-full"></div>
                     <span style={{ right: `${rangePosition}px` }} className="absolute text-lg flex flex-col items-center">
                         <TriangleIcon size={12} fill="black" strokeWidth={0} />
-                        <span className="mt-1 text-sm sm:text-base">${currentPrice}</span>
+                        <span className="mt-1 text-sm sm:text-base">${currentPrice.toLocaleString()}</span>
                     </span>
                 </div>
 
                 <div className="m-4">
                     <p className="mb-2 text-xs sm:text-sm md:text-base">Today's High</p>
-                    <span className="font-semibold text-base sm:text-lg">${todayHigh}</span>
+                    <span className="font-semibold text-base sm:text-lg">${todayHigh.toLocaleString()}</span>
                 </div>
             </div>
 
@@ -95,7 +95,7 @@ const Overview = () => {
 
                 <div className="m-4">
                     <p className="mb-2 text-xs sm:text-sm md:text-base">All time High</p>
-                    <span className="font-semibold text-base sm:text-lg">${ath}</span>
+                    <span className="font-semibold text-base sm:text-lg">${ath.toLocaleString()}</span>
                 </div>
             </div>
 
@@ -105,19 +105,19 @@ const Overview = () => {
                 <div>
                     <div className="flex justify-between text-lg py-5 border-b-2"><div className="font-semibold text-gray-500">
                         Bitcoin Price</div>
-                        <div className="font-semibold">${currentPrice}</div>
+                        <div className="font-semibold">${currentPrice.toLocaleString()}</div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2"><div className="font-semibold text-gray-500">
                         24h Low / 24h High</div>
-                        <div className="font-semibold">${todayLow} / ${todayHigh}</div>
+                        <div className="font-semibold">${todayLow.toLocaleString()} / ${todayHigh.toLocaleString()}</div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2"><div className="font-semibold text-gray-500">
                         ATL / ATH</div>
-                        <div className="font-semibold">${atl} / ${ath}</div>
+                        <div className="font-semibold">${atl.toLocaleString()} / ${ath.toLocaleString()}</div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2"><div className="font-semibold text-gray-500">
                         Trading Volume</div>
-                        <div className="font-semibold">${tradingVol}</div>
+                        <div className="font-semibold">${tradingVol.toLocaleString()}</div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2"><div className="font-semibold text-gray-500">
                         Market Cap Rank</div>
@@ -128,7 +128,7 @@ const Overview = () => {
                 <div>
                     <div className="flex justify-between text-lg py-5 border-b-2 "><div className="font-semibold text-gray-500">
                         Market Cap</div>
-                        <div className="font-semibold">${marketCap}</div>
+                        <div className="font-semibold">${marketCap.toLocaleString()}</div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2 "><div className="font-semibold text-gray-500">
                         Market Cap Dominance</div>
@@ -136,12 +136,13 @@ const Overview = () => {
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2 "><div className="font-semibold text-gray-500">
                         Volume / Market Cap</div>
-                        <div className="font-semibold"></div>
+                        <div className="font-semibold">
                         {(tradingVol / marketCap).toFixed(4)}
+                        </div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2 "><div className="font-semibold text-gray-500">
                         All-Time High</div>
-                        <div className="font-semibold">${ath} <span className={(currentPrice - ath > 0) ? "text-green-500 mx-2" : "text-red-500 mx-2"}>{(((currentPrice - ath) * 100) / ath).toFixed(2)}%</span></div>
+                        <div className="font-semibold">${ath.toLocaleString()} <span className={(currentPrice - ath > 0) ? "text-green-500 mx-2" : "text-red-500 mx-2"}>{(((currentPrice - ath) * 100) / ath).toFixed(2)}%</span></div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2 "><div className="font-semibold text-gray-500">
                         All-Time Low</div>
