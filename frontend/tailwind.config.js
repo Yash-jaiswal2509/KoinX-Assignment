@@ -70,6 +70,9 @@ export const theme = {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
     },
+    boxShadow: {
+      "custom-light": "0px 0px 6px 2px #e2e8f0",
+    },
   },
 };
 export const plugins = [

@@ -57,7 +57,7 @@ const Overview = () => {
     const max = 530;
     const screenWidth = Math.floor((screen.width) / 3);
     const dynamicWidth = (screenWidth < max) ? screenWidth : max;
-    const rangePosition = Math.floor(((dynamicWidth - 30) * (todayHigh - currentPrice)) / (todayHigh - todayLow));
+    const rangePosition = Math.floor(((dynamicWidth) * (todayHigh - currentPrice)) / (todayHigh - todayLow));
 
 
     return (
@@ -69,7 +69,7 @@ const Overview = () => {
                     <p className="mb-2 text-xs sm:text-sm md:text-base">Today's Low</p>
                     <span className="font-semibold text-base sm:text-lg">${todayLow.toLocaleString()}</span>
                 </div>
-                <div className="relative px-0 sm:px-8">
+                <div className="relative">
                     <div style={{ width: `${dynamicWidth}px` }} className="mb-1 bg-gradient-to-r from-red-400 from-10% via-yellow-400 via-60% to-green-400 h-[6px] rounded-full"></div>
                     <span style={{ right: `${rangePosition}px` }} className="absolute text-lg flex flex-col items-center">
                         <TriangleIcon size={12} fill="black" strokeWidth={0} />
@@ -89,7 +89,7 @@ const Overview = () => {
                     <p className="mb-2 text-xs sm:text-sm md:text-base">All time Low</p>
                     <span className="font-semibold text-base sm:text-lg">${atl}</span>
                 </div>
-                <div className="relative px-0 sm:px-8">
+                <div className="relative">
                     <div style={{ width: `${dynamicWidth}px` }} className="mb-1 bg-gradient-to-r from-red-400 from-10% via-yellow-400 via-60% to-green-400 h-[6px] rounded-full"></div>
                 </div>
 
