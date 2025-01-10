@@ -3,6 +3,7 @@ import { LucideInfo, TriangleIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Overview = () => {
+    
     const apiUrl = import.meta.env.VITE_KOINX_API_URL;
     const apiKey = import.meta.env.VITE_KOINX_API_KEY;
 
@@ -31,6 +32,7 @@ const Overview = () => {
                     sparkline: false
                 }
             })
+
             const response2 = await axios.get(`${apiUrl}/global`, {
                 headers: {
                     "x-cg-demo-api-key": apiKey
@@ -39,7 +41,6 @@ const Overview = () => {
 
 
             const data1 = response1.data.market_data;
-            const data2 = response2.data.data;
             setCurrentPrice(data1.current_price.usd);
             setTodayLow(data1.low_24h.usd);
             setTodayHigh(data1.high_24h.usd);
@@ -48,6 +49,9 @@ const Overview = () => {
             setTradingVol(data1.total_volume.usd)
             setMcRank(data1.market_cap_rank);
             setMarketCap(data1.market_cap.usd);
+            console.log(data1);
+
+            const data2 = response2.data.data;
             setMcd(data2.market_cap_percentage.btc)
 
         }
@@ -137,7 +141,7 @@ const Overview = () => {
                     <div className="flex justify-between text-lg py-5 border-b-2 "><div className="font-semibold text-gray-500">
                         Volume / Market Cap</div>
                         <div className="font-semibold">
-                        {(tradingVol / marketCap).toFixed(4)}
+                            {(tradingVol / marketCap).toFixed(4)}
                         </div>
                     </div>
                     <div className="flex justify-between text-lg py-5 border-b-2 "><div className="font-semibold text-gray-500">

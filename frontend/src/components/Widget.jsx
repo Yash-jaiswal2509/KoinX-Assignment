@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, memo } from 'react';
 
 function TradingViewWidget() {
-  const container = useRef();
 
   useEffect(
     () => {
@@ -62,7 +61,7 @@ function TradingViewWidget() {
   );
 
   return (
-    <div style={{width:"80%"}} className="tradingview-widget-container overflow-hidden" ref={container}></div>
+    <div style={{ width: "80%" }} className="tradingview-widget-container overflow-hidden" ref={container}></div>
   );
 }
 
